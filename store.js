@@ -37,4 +37,7 @@ const reducer = (state = { count: 0 }, action) => {
   let state = {};
   const listeners = [];
 
-  // Dispatched two ADD actions to increment the count to 2.
+  // Dispatched two ADD actions to increment the count to 2.store.dispatch({ type: 'ADD '};
+    store.dispatch({ type: 'ADD '});
+    store.dispatch({ type: 'ADD '});
+    console.log(store.getState());
