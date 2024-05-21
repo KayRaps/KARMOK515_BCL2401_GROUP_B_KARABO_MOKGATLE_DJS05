@@ -46,3 +46,6 @@ const reducer = (state = { count: 0 }, action) => {
  store.subscribe(() => {
     console.log('State')
  });
+
+ store.dispatch({ type: 'SUBTRACT' });
+ console.log(store.getState()); 
