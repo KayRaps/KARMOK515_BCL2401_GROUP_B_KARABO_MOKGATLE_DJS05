@@ -32,3 +32,9 @@ const reducer = (state = { count: 0 }, action) => {
         };
     },
   };
+
+  // Initialize the state and the array of listeners.
+  let state = {};
+  const listeners = [];
+
+  // Dispatched two ADD actions to increment the count to 2.
