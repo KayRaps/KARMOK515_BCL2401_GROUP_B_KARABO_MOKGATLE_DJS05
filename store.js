@@ -11,3 +11,16 @@ const reducer = (state = { count: 0 }, action) => {
         return state;
     }
   };
+
+  // Defining the store object that hass three methods: getState, dispatch, and subscribe.
+  const store = {
+
+    // The getState nethid returns the current state.
+    getState: () => state,
+
+    // The dispatch method takes an action and updates the state
+    dispatch: (action) => {
+        state = reducer(state, action);
+        listeners.forEach((listener) => listener());
+    },
+  }
