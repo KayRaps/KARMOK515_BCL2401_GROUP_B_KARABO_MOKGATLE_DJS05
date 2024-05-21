@@ -41,3 +41,8 @@ const reducer = (state = { count: 0 }, action) => {
     store.dispatch({ type: 'ADD '});
     store.dispatch({ type: 'ADD '});
     console.log(store.getState());
+
+ // Subscribed to the store and log a message whenever the state changes.
+ store.subscribe(() => {
+    console.log('State')
+ });
