@@ -49,3 +49,6 @@ const reducer = (state = { count: 0 }, action) => {
 
  store.dispatch({ type: 'SUBTRACT' });
  console.log(store.getState()); 
+
+ store.dispatch({ type: 'RESET' });
+ console.log(store.getState());
