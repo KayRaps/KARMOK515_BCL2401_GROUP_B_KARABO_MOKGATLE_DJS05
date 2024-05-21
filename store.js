@@ -23,4 +23,12 @@ const reducer = (state = { count: 0 }, action) => {
         state = reducer(state, action);
         listeners.forEach((listener) => listener());
     },
-  }
+
+    // The subscribe method to take a listener function and add.
+    subscribe: (listener) => {
+        listeners.push(listener);
+        return () => {
+            listeners = listeners.filter((l) => l !== listeners);
+        };
+    },
+  };
